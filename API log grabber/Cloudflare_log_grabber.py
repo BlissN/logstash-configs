@@ -11,7 +11,7 @@ while(True):
     with open(file_name, 'a+') as log:          
         while date_hour == time.strftime("%Y%m%d-%H"):
             one_min_ago = (((datetime.now() - timedelta(minutes=1)).isoformat() + "Z")) # обратить внимание на смещение из-за часового пояса
-            url = "https://api.cloudflare.com/client/v4/accounts/cebc0e5fc68f7e7adb4e48b310a83ffe/audit_logs"
+            url = "https://api.cloudflare.com/client/v4/accounts/##################################/audit_logs"
             headers = {"Authorization": "Bearer ######################", "Content-Type": "application/json"}
             param_request = {"since": one_min_ago}
             response = requests.get(url, headers=headers, params=param_request)

@@ -1,0 +1,4 @@
+FORTIDATE %{YEAR:year}\-%{MONTHNUM:month}\-%{MONTHDAY:day}
+regex_message_field ({".+})
+SERVICE (?<=sterra-partners-1 )[A-z,0-9,-,_,\[,\],\s]{3,}
+
